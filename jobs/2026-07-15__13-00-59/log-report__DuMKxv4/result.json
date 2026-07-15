@@ -1,0 +1,93 @@
+{
+    "id": "6485521b-33ea-4222-ad5b-14db71936480",
+    "task_name": "dynamo/log-report",
+    "trial_name": "log-report__DuMKxv4",
+    "trial_uri": "file:///D:/HANDSHAKE_AI/fix-task-broken/jobs/2026-07-15__13-00-59/log-report__DuMKxv4",
+    "task_id": {
+        "path": "log-report"
+    },
+    "source": "fix-task-broken",
+    "task_checksum": "dc0f74530b53552f7d1330a10cad20c4eefd6513be23453079a0de35873d5142",
+    "config": {
+        "task": {
+            "path": "log-report",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "fix-task-broken"
+        },
+        "trial_name": "log-report__DuMKxv4",
+        "trials_dir": "jobs\\2026-07-15__13-00-59",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "d333e075-0947-4e59-b915-f1ce754fe4af"
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__dumkxv4__env --project-directory D:\\HANDSHAKE_AI\\fix-task-broken\\log-report\\environment -f C:\\Users\\charan\\AppData\\Local\\Temp\\tmpbmj20_se\\log-report__DuMKxv4__env-docker-compose-resources.json -f C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-build.yaml -f C:\\Users\\charan\\AppData\\Local\\Temp\\tmpkl0x5df0\\docker-compose-mounts.json build. Return code: 1. Stdout:  Image log-report__dumkxv4__env-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 595B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 192B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:latest\n#3 DONE 1.6s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 2B done\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 32B done\n#5 DONE 0.0s\n\n#6 [3/5] WORKDIR /app\n#6 CACHED\n\n#7 [4/5] COPY access.log /app/access.log\n#7 CACHED\n\n#8 [2/5] RUN pip install --no-cache-dir pytest==8.4.1 pytest-json-ctrf==0.3.5\n#8 CACHED\n\n#9 [5/5] COPY tests /tests\n#9 ERROR: failed to calculate checksum of ref nqk5s49tsm8junffx2o8if74e::neqhsfiznkzvjhwtnmk7behiq: \"/tests\": not found\n\n#10 [1/5] FROM docker.io/library/python:latest@sha256:2a8b92a1e9eb6ef2c888eb7e6c91283788c6d613fdc8fc22e12346aff7c4406d\n#10 resolve docker.io/library/python:latest@sha256:2a8b92a1e9eb6ef2c888eb7e6c91283788c6d613fdc8fc22e12346aff7c4406d 0.0s done\n#10 CANCELED\n------\n > [5/5] COPY tests /tests:\n------\nDockerfile:8\n\n--------------------\n\n   6 |     \n\n   7 |     COPY access.log /app/access.log\n\n   8 | >>> COPY tests /tests\n\n--------------------\n\nfailed to solve: failed to compute cache key: failed to calculate checksum of ref nqk5s49tsm8junffx2o8if74e::neqhsfiznkzvjhwtnmk7behiq: \"/tests\": not found\n\n. Stderr: None. ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 350, in run\n    await self._prepare()\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 379, in _prepare\n    await self._setup_agent_environment()\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1097, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1103, in _start_agent_environment\n    await asyncio.wait_for(\n    ...<4 lines>...\n    )\n  File \"C:\\Users\\charan\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 865, in start\n    await self._run_docker_compose_command([\"build\"])\n  File \"C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 631, in _run_docker_compose_command\n    raise RuntimeError(\n    ...<5 lines>...\n    )\nRuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__dumkxv4__env --project-directory D:\\HANDSHAKE_AI\\fix-task-broken\\log-report\\environment -f C:\\Users\\charan\\AppData\\Local\\Temp\\tmpbmj20_se\\log-report__DuMKxv4__env-docker-compose-resources.json -f C:\\Users\\charan\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-build.yaml -f C:\\Users\\charan\\AppData\\Local\\Temp\\tmpkl0x5df0\\docker-compose-mounts.json build. Return code: 1. Stdout:  Image log-report__dumkxv4__env-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 595B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 192B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:latest\n#3 DONE 1.6s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 2B done\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 32B done\n#5 DONE 0.0s\n\n#6 [3/5] WORKDIR /app\n#6 CACHED\n\n#7 [4/5] COPY access.log /app/access.log\n#7 CACHED\n\n#8 [2/5] RUN pip install --no-cache-dir pytest==8.4.1 pytest-json-ctrf==0.3.5\n#8 CACHED\n\n#9 [5/5] COPY tests /tests\n#9 ERROR: failed to calculate checksum of ref nqk5s49tsm8junffx2o8if74e::neqhsfiznkzvjhwtnmk7behiq: \"/tests\": not found\n\n#10 [1/5] FROM docker.io/library/python:latest@sha256:2a8b92a1e9eb6ef2c888eb7e6c91283788c6d613fdc8fc22e12346aff7c4406d\n#10 resolve docker.io/library/python:latest@sha256:2a8b92a1e9eb6ef2c888eb7e6c91283788c6d613fdc8fc22e12346aff7c4406d 0.0s done\n#10 CANCELED\n------\n > [5/5] COPY tests /tests:\n------\nDockerfile:8\n\n--------------------\n\n   6 |     \n\n   7 |     COPY access.log /app/access.log\n\n   8 | >>> COPY tests /tests\n\n--------------------\n\nfailed to solve: failed to compute cache key: failed to calculate checksum of ref nqk5s49tsm8junffx2o8if74e::neqhsfiznkzvjhwtnmk7behiq: \"/tests\": not found\n\n. Stderr: None. \n",
+        "occurred_at": "2026-07-15T13:01:02.555701"
+    },
+    "started_at": "2026-07-15T07:30:59.714078Z",
+    "finished_at": "2026-07-15T07:31:02.935043Z",
+    "environment_setup": {
+        "started_at": "2026-07-15T07:30:59.785921Z",
+        "finished_at": "2026-07-15T07:31:02.553342Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}
